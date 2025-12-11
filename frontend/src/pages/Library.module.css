@@ -1,0 +1,88 @@
+/* NAV-TABS */
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin: 0px 27px 32px;
+}
+
+.tabBtn {
+  font-family: "HP Simplified", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  background: #fdf1e0;
+  border: 2px solid #711919;
+  border-radius: 6px;
+  color: #711919;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tabBtn:hover {
+  background: #ffe8c7;
+  color:#711919;
+}
+
+.tabActive {
+  background: #711919;
+  color: #fdf1e0;
+}
+
+/* mesaj gol */
+.emptyMsg {
+  margin: 0 24px;
+  font-family: "HP Simplified", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #1e1e1e;
+}
+
+.desc {
+  font-family: "HP Simplified", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: #000;
+  line-height: 1.3;
+}
+
+/* my loans */
+.actionBtn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-family: "HP Simplified";
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.acceptBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.acceptBtn:hover {
+  background-color: #218838;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.rejectBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.rejectBtn:hover {
+  background-color: #c82333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.returnBtn {
+  background-color: #711919;
+  color: white;
+}
+
+.returnBtn:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+

@@ -1,0 +1,272 @@
+.register {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.register .div {
+  background-image: url(./images/image-15.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+.register .logo {
+  background-image: url(./images/logo.svg);
+  background-size: 100% 100%;
+  height: 95px;
+  width: 486px;
+  position: absolute;
+  top: 302px;
+  left: 132px;
+}
+
+.register .frame {
+  background-color: #711919;
+  border-radius: 7px;
+  height: 625px;
+  width: 485px;
+  overflow: hidden;
+  position: absolute;
+  top: 37px;
+  left: 902px;
+}
+
+.register .text-wrapper-2 {
+  -webkit-text-stroke: 1px #fdf1e0;
+  color: #fdf1e0;
+  font-family: "Italiana", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  top: 38px;
+  left: 140px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.register .overlap-group-wrapper,
+.register .overlap-wrapper,
+.register .group-2,
+.register .group-3 {
+  height: 67px;
+  width: 388px;
+  position: absolute;
+  left: 44px;
+}
+
+.register .overlap-group-wrapper { top: 149px; }
+.register .overlap-wrapper       { top: 233px; }
+.register .group-2               { top: 317px; }
+.register .group-3               { top: 401px; }
+
+.register .overlap {
+  border: 3px solid #fdf1e0;
+  border-radius: 5px;
+  height: 67px;
+  width: 386px;
+  position: relative;
+}
+
+.register .group {
+  height: 51px;
+  width: 318px;
+  position: absolute;
+  top: 476px;
+  left: 85px;
+}
+
+.register .overlap-group {
+  background: #fdf1e0;
+  border-radius: 3px;
+  height: 51px;
+  width: 316px;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.register .overlap-group:hover {
+  background: #f0d8b0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(113,25,25,.2);
+}
+
+.register .text-wrapper {      
+  color: #711919;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  left: 112px;
+  width: 92px;
+}
+
+.register .p {
+  color: #fff;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  top: 550px;
+  left: 110px;
+  white-space: nowrap;
+}
+
+.register .link {
+  color: #fdf1e0;
+  text-decoration: underline;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.register .link:hover { color: #f0d8b0; }
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 24px;
+  font-family: "HP Simplified", Helvetica;
+  font-weight: 300;
+  color: #fdf1e0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.input::placeholder { color:#fdf1e0; opacity:.8; }
+
+/* mesaje succes / eroare */
+.message {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  top: 520px;
+  opacity: 0;
+  transition: all .3s ease;
+}
+.message.show { opacity: 1; }
+.message.error   { background:rgba(255,0,0,.2); border-left:4px solid #ff3333; color:#ffcccc; }
+.message.success { background:rgba(0,255,0,.2); border-left:4px solid #33ff33; color:#ccffcc; }
+
+/* anim */
+@keyframes fadeIn {
+  from { opacity:0; transform: translate(-50%,-10px); }
+  to   { opacity:1; transform: translate(-50%,0); }
+}
+.message.show { animation: fadeIn .3s forwards; }
+
+@media (max-width: 1199px) {
+  .register .logo {
+    left: 60px;
+    top: 120px;
+    width: 350px;
+    height: auto;
+  }
+  .register .frame {
+    left: auto;
+    right: 60px;
+    width: 430px;
+  }
+
+  .register .overlap-group-wrapper,
+  .register .overlap-wrapper,
+  .register .group-2,
+  .register .group-3 { width: 350px; left: 40px; }
+  .register .overlap { width: 348px; }
+  .register .group { width: 290px; left: 70px; }
+  .register .overlap-group { width: 288px; }
+}
+
+@media (max-width: 991px) {
+  .register .logo {
+    position: static;
+    margin: 40px auto 0;
+    width: 60vw;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .register .frame {
+    position: relative;
+    left: 0;
+    top: 40px;
+    margin: 0 auto;
+    width: 90vw;
+    max-width: 430px;
+  }
+
+  .register .text-wrapper-2,
+  .register .overlap-group-wrapper,
+  .register .overlap-wrapper,
+  .register .group-2,
+  .register .group-3,
+  .register .group,
+  .register .p,
+  .register .message {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .register .overlap-group-wrapper,
+  .register .overlap-wrapper,
+  .register .group-2,
+  .register .group-3,
+  .register .group {
+    width: 80%;
+    max-width: 330px;
+  }
+  .register .overlap,
+  .register .overlap-group { width: 100%; }
+
+  .register .text-wrapper-2 { font-size: 56px; left: 50%; }
+  .register .p            { font-size: 18px; }
+  .input                  { font-size: 20px; padding: 14px; }
+}
+
+@media (max-width: 479px) {
+  .register .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 32px 24px 40px;
+  }
+
+  .register .text-wrapper-2,
+  .register .overlap-group-wrapper,
+  .register .overlap-wrapper,
+  .register .group-2,
+  .register .group-3,
+  .register .group,
+  .register .p,
+  .register .message {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+  }
+
+  .register .text-wrapper-2 { font-size: 48px; margin-bottom: 24px; }
+  .register .overlap-group-wrapper,
+  .register .overlap-wrapper,
+  .register .group-2,
+  .register .group-3 {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .register .group { width: 100%; margin-top: 24px; }
+  .register .p     { margin-top: 24px; text-align: center; }
+
+  .input            { font-size: 18px; padding: 12px; }
+  .register .message{ width: 100%; margin-top: 16px; position: static; }
+}

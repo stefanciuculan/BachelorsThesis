@@ -1,0 +1,288 @@
+.login {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login .div {
+  background-image: url(./images/image-15.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+.login .logo {
+  background-image: url(./images/logo.svg);
+  background-size: 100% 100%;
+  height: 95px;
+  left: 132px;
+  position: absolute;
+  top: 302px;
+  width: 486px;
+}
+
+.login .frame {
+  background-color: #711919;
+  border-radius: 7px;
+  height: 625px;
+  left: 902px;
+  overflow: hidden;
+  position: absolute;
+  top: 37px;
+  width: 485px;
+}
+
+.login .group {
+  height: 51px;
+  left: 85px;
+  position: absolute;
+  top: 456px;
+  width: 318px;
+}
+
+.login .overlap-group {
+  background-color: #fdf1e0;
+  border-radius: 3px;
+  height: 51px;
+  position: relative;
+  width: 316px;
+  transition: all 0.3s ease;
+}
+
+.login .overlap-group:hover {
+  background-color: #f0d8b0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(113, 25, 25, 0.2);
+}
+
+.login .overlap-group:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(113, 25, 25, 0.2);
+}
+
+.login .text-wrapper {
+  color: #711919;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 116px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 84px;
+}
+
+.login .text-wrapper-2 {
+  -webkit-text-stroke: 1px #fdf1e0;
+  color: #fdf1e0;
+  font-family: "Italiana", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 150px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 38px;
+  white-space: nowrap;
+}
+
+.login .overlap-wrapper {
+  height: 67px;
+  left: 44px;
+  position: absolute;
+  top: 313px;
+  width: 388px;
+}
+
+.login .overlap {
+  border: 3px solid;
+  border-color: #fdf1e0;
+  border-radius: 5px;
+  height: 67px;
+  position: relative;
+  width: 386px;
+}
+
+.login .text-wrapper-3 {
+  color: #fdf1e0;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  white-space: nowrap;
+}
+
+.login .overlap-group-wrapper {
+  height: 67px;
+  left: 44px;
+  position: absolute;
+  top: 209px;
+  width: 388px;
+}
+
+.login .text-wrapper-4 {
+  color: #fdf1e0;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+  width: 54px;
+}
+
+.login .p {
+  color: #ffffff;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 20px;
+  font-weight: 300;
+  left: 94px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 530px;
+  white-space: nowrap;
+  width: 357px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  font-size: 24px;
+  font-family: "HP Simplified", Helvetica;
+  font-weight: 300;
+  color: #fdf1e0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #fdf1e0;
+  opacity: 0.8;
+}
+
+.input-field:focus {
+  border-color: #fdf1e0;
+}
+
+.input-field:focus + .label,
+.input-field:not(:placeholder-shown) + .label {
+  top: 5px;
+  font-size: 12px;
+  color: #fdf1e0;
+}
+
+.message {
+  position: absolute;
+  width: 75%;
+  left: 49%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 5px;
+  font-family: "HP Simplified", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: 380px;
+}
+
+.message.show { opacity: 1; }
+.message.error   { background-color: rgba(255, 0, 0, 0.2); border-left: 4px solid #ff3333; color: #ffcccc; }
+.message.success { background-color: rgba(0, 255, 0, 0.2); border-left: 4px solid #33ff33; color: #ccffcc; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.message.show { animation: fadeIn 0.3s forwards; }
+
+.link {
+  color: #fdf1e0;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.link:hover { color: #f0d8b0; }
+
+@media (max-width: 991px) {
+  .login .logo {
+    position: relative;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    width: 60vw;
+    max-width: 380px;
+    height: auto;
+  }
+
+  .login .frame {
+    position: relative;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 420px;
+    height: auto;
+    padding-bottom: 60px;
+    margin-top: 60px;
+  }
+
+  .login .text-wrapper-2,
+  .login .overlap-group-wrapper,
+  .login .overlap-wrapper,
+  .login .group,
+  .login .p {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .login .text-wrapper-2 { font-size: 48px; margin: 40px auto 20px; text-align:center; }
+
+  .login .overlap-group-wrapper,
+  .login .overlap-wrapper { width: 82%; margin: 20px auto; }
+
+  .login .group { width: 82%; margin: 20px auto 0; height: 51px; }
+
+  .login .p { margin-top: 25px; text-align:center; left: 50%; transform: translateX(-50%); font-size: 18px; width: 90%; top: auto; }
+}
+
+@media (max-width: 576px) {
+  .login .logo {
+    width: 70vw;
+    max-width: 280px;
+    top: 20px;
+  }
+
+  .login .frame {
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .login .text-wrapper-2 { font-size: 38px; margin-top: 30px; }
+
+  .login .overlap-group-wrapper,
+  .login .overlap-wrapper,
+  .login .group { width: 90%; }
+
+  .login .input { font-size: 18px; padding: 12px; }
+
+  .login .p { font-size: 16px; }
+}
